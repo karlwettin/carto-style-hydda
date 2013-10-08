@@ -187,7 +187,8 @@
 
 #place::small[type='village'][zoom>=13],
 #place::small[type='suburb'][zoom>=13],
-#place::small[type='hamlet'][zoom>=13] {
+#place::small[type='hamlet'][zoom>=13],
+#place::small[type='island'][zoom>=13]{
   text-name:'[name]';
   text-face-name:@sans;
   text-placement:point;
@@ -477,6 +478,21 @@
   text-fill: @poi_text;
 }
 
+/* Islands and islets */
+
+.text {
+  [place = 'island'][zoom >= 12]::place,
+  [place = 'islet'][zoom >= 12]::place{
+    text-name: "[name]";
+    text-fill:@island_text;
+    text-face-name:@sans;
+    text-size:9;
+    text-halo-fill:@island_halo;
+    text-halo-radius:1;
+    text-wrap-width: 50;
+    text-placement: interior;
+  }
+}
 
 /* ================================================================== */
 /* WATERWAY LABELS
