@@ -525,9 +525,9 @@
   [zoom=11][area>25600000],
   [zoom=13][area>1600000],
   [zoom=14][area>320000],
-  [zoom=15][area>80000],
-  [zoom=16][area>20000],
-  [zoom=17][area>5000],
+  [zoom=15][area>240000],
+  [zoom=16][area>90000],
+  [zoom=17][area>10000],
   [zoom=18][area>=0] {
     text-name: "[name]";
     text-fill:@other_text;
@@ -668,7 +668,7 @@
 /* house names and numbers */
 
 #housenumbers {
-  [zoom >= 17] {
+  [zoom >= 18] {
     text-name: "[addr:housenumber]";
     text-placement: interior;
     text-min-distance: 1;

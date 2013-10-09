@@ -1,5 +1,5 @@
 /* ****************************************************************** */
-/* OSM BRIGHT for Imposm                                              */
+/* Based on OSM BRIGHT for Imposm                                     */
 /* ****************************************************************** */
 
 /* For basic style customization you can simply edit the colors and
@@ -60,6 +60,14 @@ Map { font-directory: url(./fonts); }
 @industrial:        @land * 0.96;
 @parking:           #EEE;
 
+@golf_practice:     @grass * 0.98;
+@golf_green:        @grass * 0.97;
+@golf_tee:          @grass * 0.96;
+@golf_fairway:      @grass * 0.95;
+@golf_rough:        @grass * 0.93;
+@golf_bunker:       @FFEEC7; 
+
+
 /* ================================================================== */
 /* ROAD COLORS
 /* ================================================================== */
@@ -93,9 +101,13 @@ Map { font-directory: url(./fonts); }
 @standard_fill:     #f6f6f6;
 @standard_case:     #f6f6f6;
 
+@no_auto_line:      #c0ccc4;
+
 @pedestrian_line:   @standard_line;
 @pedestrian_fill:   #f6f6f6;
 @pedestrian_case:   @land;
+
+
 
 @cycle_line:        @standard_line;
 @cycle_fill:        #ff0002;

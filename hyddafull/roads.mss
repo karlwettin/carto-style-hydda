@@ -141,7 +141,7 @@ come in as well.
     [stylegroup='mainroad'] { line-width: @rdz18_med + 4; }
     [stylegroup='minorroad']{ line-width: @rdz18_min + 3.5; }
     [stylegroup='service']  { line-width: @rdz18_min / 3 + 3.5; }
-    [stylegroup='noauto']   { line-width: @rdz18_min / 4 + 6; }
+    [stylegroup='noauto']   { line-width: @rdz18_min / 4 + 6;  line-dasharray: 3,3; }
     [stylegroup='railway']  { line-width: 4 + 6; }
   }
 }
@@ -178,6 +178,11 @@ come in as well.
     [type='subway'] { line-opacity: 0.67; }
     [zoom>15] { line-dasharray: 1,2; } 
   }
+  
+  [stylegroup='noauto']   { 
+    line-color: @no_auto_line; 
+  }
+  
   [stylegroup='noauto'],
   [stylegroup='service'],
   [stylegroup='minorroad'] {
