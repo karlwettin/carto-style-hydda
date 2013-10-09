@@ -187,8 +187,7 @@
 
 #place::small[type='village'][zoom>=13],
 #place::small[type='suburb'][zoom>=13],
-#place::small[type='hamlet'][zoom>=13],
-#place::small[type='island'][zoom>=13]{
+#place::small[type='hamlet'][zoom>=13]{
   text-name:'[name]';
   text-face-name:@sans;
   text-placement:point;
@@ -478,11 +477,20 @@
   text-fill: @poi_text;
 }
 
-/* Islands and islets */
 
-.text {
-  [place = 'island'][zoom >= 12]::place,
-  [place = 'islet'][zoom >= 12]::place{
+
+
+/* Islands and islets */ 
+
+
+#island_label_polygon {
+  [zoom=10][area>2000000],
+  [zoom=11][area>500000],
+  [zoom=12][area>200000],
+  [zoom=13][area>50000],
+  [zoom=14][area>10000],
+  [zoom=15][area>2500],
+  [zoom>15][area>0] {
     text-name: "[name]";
     text-fill:@island_text;
     text-face-name:@sans;
@@ -491,6 +499,44 @@
     text-halo-radius:1;
     text-wrap-width: 50;
     text-placement: interior;
+  }
+}
+
+
+// nodes with name and place=island/islet 
+#island_label_point {
+  [zoom>=13] {
+    text-name: "[name]";
+    text-fill:@island_text;
+    text-face-name:@sans;
+    text-size:9;
+    text-halo-fill:@island_halo;
+    text-halo-radius:1;
+    text-wrap-width: 50;
+    text-placement: interior;
+  }
+}
+
+
+/* residential is often used as neighborhood name, block name and more*/
+
+#area_label[type = 'residential']{    
+  [zoom=10][area>102400000],
+  [zoom=11][area>25600000],
+  [zoom=13][area>1600000],
+  [zoom=14][area>320000],
+  [zoom=15][area>80000],
+  [zoom=16][area>20000],
+  [zoom=17][area>5000],
+  [zoom=18][area>=0] {
+    text-name: "[name]";
+    text-fill:@other_text;
+    text-face-name:@sans;
+    text-size:9;
+    text-halo-fill:@other_halo;
+    text-halo-radius:1;
+    text-wrap-width: 50;
+    text-placement: interior; 
   }
 }
 

@@ -132,8 +132,8 @@ Map { font-directory: url(./fonts); }
 @town_text:         #222;
 @town_halo:         @place_halo;
 
-@island_text:         #222;
-@island_halo:         @place_halo;
+@island_text:       #222;
+@island_halo:       @place_halo;
 
 
 @poi_text:          #888;
