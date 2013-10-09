@@ -43,6 +43,7 @@ Map { font-directory: url(./fonts); }
 @park:              #c2debd;
 @cemetery:          #D6DED2;
 @wooded:            #C3D9AD;
+@scrub:             @wooded * 1.1;
 @agriculture:       #F2E8B6;
 
 @building:          #cfcfcf;
