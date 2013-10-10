@@ -37,6 +37,9 @@ public class Build {
     File roadsAndLabelsFileMML = new File(path, "hydda_roads_and_labels.mml");
 
     String fullStringMML = projectString;
+    fullStringMML = fullStringMML.replace("http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.3.0/physical/10m-land.zip", "/etc/mapnik-osm-data/hydda/10m-land.shp");
+    fullStringMML = fullStringMML.replace("http://tilemill-data.s3.amazonaws.com/osm/coastline-good.zip", "/usr/share/mapnik-osm-data/world_boundaries/processed_p.shp");
+    fullStringMML = fullStringMML.replace("http://tilemill-data.s3.amazonaws.com/osm/shoreline_300.zip", "/usr/share/mapnik-osm-data/world_boundaries/shoreline_300.shp");
     FileUtils.write(fullFileMML, fullStringMML, "utf8");
 
     String baseStringMML = projectString;
@@ -75,13 +78,6 @@ public class Build {
   }
 
   private static void exec(File carto, File mml, File path) throws Exception {
-
-    Map<String, String> env = System.getenv();
-    for (String envName : env.keySet()) {
-         System.out.format("%s=%s%n", envName, env.get(envName));
-    }
-
-
     System.out.println("Executing Carto on " + mml.getAbsolutePath() + " in path " + path.getAbsolutePath());
     System.out.println("");
     Process process = Runtime.getRuntime().exec(new String[]{carto.getAbsolutePath(), mml.getName()}, new String[]{}, path);
