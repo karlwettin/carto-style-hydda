@@ -15,7 +15,7 @@ public class Build {
 
     Runtime runtime = Runtime.getRuntime();
 
-    File carto = new File("/usr/local/bin/carto");
+    File carto = new File("/usr/bin/carto");
     if (!carto.exists()) {
       throw new RuntimeException(carto.getAbsolutePath() + " does not exists!");
     }
