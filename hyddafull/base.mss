@@ -18,13 +18,13 @@
     }
   }
 
-  [leisure = 'track'][zoom >= 15] {
+  [leisure = 'track'][zoom >= 13] {
     polygon-fill: @track;
     line-width: 0.5;
     line-color: @track * 0.95;
   }
 
-  [leisure = 'pitch'][zoom >= 15] {
+  [leisure = 'pitch'][zoom >= 13] {
     polygon-fill: @pitch;
     line-width: 0.5;
     line-color: @pitch * 0.95;
