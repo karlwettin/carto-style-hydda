@@ -28,18 +28,17 @@ public class Build {
 
     File projectFile = new File(path, "project.mml");
 
-    String projectString = FileUtils.readFileToString(projectFile, "utf8");
-
-    projectString = projectString.replaceAll("tile-sweden\\.openstreetmap\\.se", "localhost");
+    String mml = FileUtils.readFileToString(projectFile, "utf8");
+    mml = mml.replace("http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.3.0/physical/10m-land.zip", "/etc/mapnik-osm-data/hydda/10m-land.shp");
+    mml = mml.replace("http://tilemill-data.s3.amazonaws.com/osm/coastline-good.zip", "/usr/share/mapnik-osm-data/world_boundaries/processed_p.shp");
+    mml = mml.replace("http://tilemill-data.s3.amazonaws.com/osm/shoreline_300.zip", "/usr/share/mapnik-osm-data/world_boundaries/shoreline_300.shp");
+    mml = mml.replaceAll("tile-sweden\\.openstreetmap\\.se", "localhost");
 
     File fullFileMML = new File(path, "hydda_full.mml");
     File baseFileMML = new File(path, "hydda_base.mml");
     File roadsAndLabelsFileMML = new File(path, "hydda_roads_and_labels.mml");
 
-    String fullStringMML = projectString;
-    fullStringMML = fullStringMML.replace("http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.3.0/physical/10m-land.zip", "/etc/mapnik-osm-data/hydda/10m-land.shp");
-    fullStringMML = fullStringMML.replace("http://tilemill-data.s3.amazonaws.com/osm/coastline-good.zip", "/usr/share/mapnik-osm-data/world_boundaries/processed_p.shp");
-    fullStringMML = fullStringMML.replace("http://tilemill-data.s3.amazonaws.com/osm/shoreline_300.zip", "/usr/share/mapnik-osm-data/world_boundaries/shoreline_300.shp");
+    String fullStringMML = mml;
     FileUtils.write(fullFileMML, fullStringMML, "utf8");
 
     String baseStringMML = fullStringMML;
@@ -81,7 +80,7 @@ public class Build {
   private static void exec(File carto, File mml, File xml, File path) throws Exception {
     System.out.println("Executing Carto on " + mml.getAbsolutePath() + " in path " + path.getAbsolutePath());
 
-    ProcessBuilder builder = new ProcessBuilder(carto.getAbsolutePath(), mml.getAbsolutePath(), " > ", xml.getAbsolutePath());
+    ProcessBuilder builder = new ProcessBuilder(carto.getAbsolutePath(), mml.getAbsolutePath() + " > " + xml.getAbsolutePath());
     builder.redirectErrorStream(true);
     builder.redirectOutput(ProcessBuilder.Redirect.INHERIT);
     Process process = builder.start();
