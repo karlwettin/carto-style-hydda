@@ -53,13 +53,14 @@ public class Build {
     roadsAndLabelsStringMML = roadsAndLabelsStringMML.replace("\"base.mms\",", "");
     FileUtils.write(roadsAndLabelsFileMML, roadsAndLabelsStringMML, "utf8");
 
-    exec(carto, fullFileMML, path);
-    exec(carto, baseFileMML, path);
-    exec(carto, roadsAndLabelsFileMML, path);
+    File fullFileXML = new File("hydda_full.xml");
+    File baseFileXML = new File("hydda_base.xml");
+    File roadsAndLabelsFileXML = new File("hydda_roads_and_labels.xml");
 
-    File fullFileXML = new File(path, "hydda_full.xml");
-    File baseFileXML = new File(path, "hydda_base.xml");
-    File roadsAndLabelsFileXML = new File(path, "hydda_roads_and_labels.xml");
+    exec(carto, fullFileMML, fullFileXML, path);
+    exec(carto, baseFileMML, baseFileXML, path);
+    exec(carto, roadsAndLabelsFileMML, roadsAndLabelsFileXML, path);
+
 
     String fullStringXML = FileUtils.readFileToString(fullFileXML, "utf8");
     String baseStringXML = FileUtils.readFileToString(baseFileXML, "utf8");
@@ -77,9 +78,9 @@ public class Build {
 
   }
 
-  private static void exec(File carto, File mml, File path) throws Exception {
+  private static void exec(File carto, File mml, File xml, File path) throws Exception {
     System.out.println("Executing Carto on " + mml.getAbsolutePath() + " in path " + path.getAbsolutePath());
-    Process process = Runtime.getRuntime().exec(new String[]{carto.getAbsolutePath(), mml.getName()}, new String[]{}, path);
+    Process process = Runtime.getRuntime().exec(new String[]{carto.getAbsolutePath(), mml.getName(), ">", xml.getAbsolutePath()}, new String[]{}, path);
     process.waitFor();
     System.out.println("Done.");
   }
