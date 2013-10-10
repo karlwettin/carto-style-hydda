@@ -40,14 +40,14 @@ public class Build {
     FileUtils.write(fullFileMML, fullStringMML, "utf8");
 
     String baseStringMML = fullStringMML;
-    baseStringMML = baseStringMML.replace("\"base.mms\",", "\"base.mms\"");
-    baseStringMML = baseStringMML.replace("\"roads.mms\",", "");
-    baseStringMML = baseStringMML.replace("\"labels.mms\"", "");
+    baseStringMML = baseStringMML.replace("\"base.mss\",", "\"base.mss\"");
+    baseStringMML = baseStringMML.replace("\"roads.mss\",", "");
+    baseStringMML = baseStringMML.replace("\"labels.mss\"", "");
     FileUtils.write(baseFileMML, baseStringMML, "utf8");
 
     String roadsAndLabelsStringMML = fullStringMML;
     roadsAndLabelsStringMML = roadsAndLabelsStringMML.replaceFirst("\\{", "{ \"background-color\":\"transparent\",");
-    roadsAndLabelsStringMML = roadsAndLabelsStringMML.replace("\"base.mms\",", "");
+    roadsAndLabelsStringMML = roadsAndLabelsStringMML.replace("\"base.mss\",", "");
     FileUtils.write(roadsAndLabelsFileMML, roadsAndLabelsStringMML, "utf8");
 
     File fullFileXML = new File("hydda_full.xml");
