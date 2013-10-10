@@ -11,6 +11,6 @@
 # npm install -g millstone
 # npm install -g carto
 
-mvn install -Dtest=false -DfailIfNoTests=false
+mvn clean install -Dtest=false -DfailIfNoTests=false
 mvn exec:java -Dexec.mainClass="Build"
 
