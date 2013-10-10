@@ -79,12 +79,9 @@ public class Build {
 
   private static void exec(File carto, File mml, File path) throws Exception {
     System.out.println("Executing Carto on " + mml.getAbsolutePath() + " in path " + path.getAbsolutePath());
-    System.out.println("");
     Process process = Runtime.getRuntime().exec(new String[]{carto.getAbsolutePath(), mml.getName()}, new String[]{}, path);
     process.waitFor();
-    IOUtils.copy(process.getInputStream(), System.out);
-    IOUtils.copy(process.getErrorStream(), System.err);
-    System.out.println();
+    System.out.println("Done.");
   }
 
 }
