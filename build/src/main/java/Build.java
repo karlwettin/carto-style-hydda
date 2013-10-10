@@ -42,13 +42,13 @@ public class Build {
     fullStringMML = fullStringMML.replace("http://tilemill-data.s3.amazonaws.com/osm/shoreline_300.zip", "/usr/share/mapnik-osm-data/world_boundaries/shoreline_300.shp");
     FileUtils.write(fullFileMML, fullStringMML, "utf8");
 
-    String baseStringMML = projectString;
+    String baseStringMML = fullStringMML;
     baseStringMML = baseStringMML.replace("\"base.mms\",", "\"base.mms\"");
     baseStringMML = baseStringMML.replace("\"roads.mms\",", "");
     baseStringMML = baseStringMML.replace("\"labels.mms\"", "");
     FileUtils.write(baseFileMML, baseStringMML, "utf8");
 
-    String roadsAndLabelsStringMML = projectString;
+    String roadsAndLabelsStringMML = fullStringMML;
     roadsAndLabelsStringMML = roadsAndLabelsStringMML.replaceFirst("\\{", "{ \"background-color\":\"transparent\",");
     roadsAndLabelsStringMML = roadsAndLabelsStringMML.replace("\"base.mms\",", "");
     FileUtils.write(roadsAndLabelsFileMML, roadsAndLabelsStringMML, "utf8");
