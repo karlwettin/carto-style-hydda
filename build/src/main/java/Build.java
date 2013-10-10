@@ -82,7 +82,7 @@ public class Build {
 
     FileUtils.deleteQuietly(xml);
 
-    ProcessBuilder builder = new ProcessBuilder(carto.getAbsolutePath(), mml.getAbsolutePath() + " > " + xml.getAbsolutePath());
+    ProcessBuilder builder = new ProcessBuilder(carto.getAbsolutePath(), mml.getAbsolutePath());
     builder.redirectErrorStream(false);
     builder.redirectOutput(ProcessBuilder.Redirect.appendTo(xml));
     Process process = builder.start();
