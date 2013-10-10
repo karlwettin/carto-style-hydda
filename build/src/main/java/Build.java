@@ -80,7 +80,11 @@ public class Build {
 
   private static void exec(File carto, File mml, File xml, File path) throws Exception {
     System.out.println("Executing Carto on " + mml.getAbsolutePath() + " in path " + path.getAbsolutePath());
-    Process process = Runtime.getRuntime().exec(new String[]{carto.getAbsolutePath(), mml.getName(), ">", xml.getAbsolutePath()}, new String[]{}, path);
+
+    ProcessBuilder builder = new ProcessBuilder(carto.getAbsolutePath(), mml.getAbsolutePath(), " > ", xml.getAbsolutePath());
+    builder.redirectErrorStream(true);
+    builder.redirectOutput(ProcessBuilder.Redirect.INHERIT);
+    Process process = builder.start();
     process.waitFor();
     System.out.println("Done.");
   }
