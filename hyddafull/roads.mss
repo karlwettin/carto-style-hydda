@@ -251,7 +251,12 @@ come in as well.
     [stylegroup='mainroad'] { line-width: @rdz17_med; }
     [stylegroup='minorroad']{ line-width: @rdz17_min; }
     [stylegroup='service']  { line-width: @rdz17_min / 3; }
-    [stylegroup='noauto']   { line-width: @rdz17_min / 4; line-dasharray: 2,2; }
+    [stylegroup='noauto']   { 
+      line-width: @rdz17_min / 4;
+      line-dasharray: 1,3;
+      [type='cycleway'] { line-dasharray: 2,2; }
+    }         
+
     [stylegroup='railway']  { line-width: 3; }
   }
   [zoom>=18] {
@@ -259,7 +264,11 @@ come in as well.
     [stylegroup='mainroad'] { line-width: @rdz18_med; }
     [stylegroup='minorroad']{ line-width: @rdz18_min; }
     [stylegroup='service']  { line-width: @rdz18_min / 2; }
-    [stylegroup='noauto']   { line-width: @rdz18_min / 4; line-dasharray: 3,3; }
+    [stylegroup='noauto']   { 
+      line-width: @rdz18_min / 4;
+      line-dasharray: 1,3;
+      [type='cycleway'] { line-dasharray: 3,3; }
+    }         
     [stylegroup='railway']  { line-width: 4; }
   }
 }
