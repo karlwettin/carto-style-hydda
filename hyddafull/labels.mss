@@ -521,9 +521,8 @@
 /* residential is often used as neighborhood name, block name and more*/
 
 #area_label[type = 'residential']{    
-  [zoom=10][area>102400000],
-  [zoom=11][area>25600000],
-  [zoom=13][area>1600000],
+  [zoom=12][area>1280000],
+  [zoom=13][area>640000],
   [zoom=14][area>320000],
   [zoom=15][area>240000],
   [zoom=16][area>90000],
