@@ -1,8 +1,6 @@
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.IOUtils;
 
 import java.io.File;
-import java.util.Map;
 import java.util.regex.Pattern;
 
 /**
@@ -65,9 +63,9 @@ public class Build {
     String baseStringXML = FileUtils.readFileToString(baseFileXML, "utf8");
     String roadsAndLabelsStringXML = FileUtils.readFileToString(roadsAndLabelsFileXML, "utf8");
 
-    fullStringXML = fullStringXML.replaceFirst(Pattern.quote("<Parameters>") + ".+" + Pattern.quote("</Parameters>"), "");
-    baseStringXML = baseStringXML.replaceFirst(Pattern.quote("<Parameters>") + ".+" + Pattern.quote("</Parameters>"), "");
-    roadsAndLabelsStringXML = roadsAndLabelsStringXML.replaceFirst(Pattern.quote("<Parameters>") + ".+" + Pattern.quote("</Parameters>"), "");
+    fullStringXML = removeParameters(fullStringXML);
+    baseStringXML = removeParameters(baseStringXML);
+    roadsAndLabelsStringXML = removeParameters(roadsAndLabelsStringXML);
 
     FileUtils.write(fullFileXML, fullStringXML, "utf8");
     FileUtils.write(baseFileXML, baseStringXML, "utf8");
@@ -75,6 +73,11 @@ public class Build {
 
     System.currentTimeMillis();
 
+  }
+
+  private static String removeParameters(String xml) {
+    xml = xml.replaceFirst("(?s)" + Pattern.quote("<Parameters>") + ".+" + Pattern.quote("</Parameters>"), "");
+    return xml;
   }
 
   private static void exec(File carto, File mml, File xml, File path) throws Exception {
