@@ -13,7 +13,7 @@ public class Build {
 
     Runtime runtime = Runtime.getRuntime();
 
-    File carto = new File("/usr/bin/carto");
+    File carto = new File("/usr/local/bin/carto");
     if (!carto.exists()) {
       throw new RuntimeException(carto.getAbsolutePath() + " does not exists!");
     }
@@ -27,10 +27,10 @@ public class Build {
     File projectFile = new File(path, "project.mml");
 
     String mml = FileUtils.readFileToString(projectFile, "utf8");
-    mml = mml.replace("http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.3.0/physical/10m-land.zip", "/etc/mapnik-osm-data/hydda/10m-land.shp");
-    mml = mml.replace("http://tilemill-data.s3.amazonaws.com/osm/coastline-good.zip", "/usr/share/mapnik-osm-data/world_boundaries/processed_p.shp");
-    mml = mml.replace("http://tilemill-data.s3.amazonaws.com/osm/shoreline_300.zip", "/usr/share/mapnik-osm-data/world_boundaries/shoreline_300.shp");
-    mml = mml.replaceAll("tile-sweden\\.openstreetmap\\.se", "localhost");
+    mml = mml.replace("http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.3.0/physical/10m-land.zip", "/etc/mapnik-osm-data/hydda/data/10m-land.shp");
+    mml = mml.replace("http://tilemill-data.s3.amazonaws.com/osm/coastline-good.zip", "/etc/mapnik-osm-data/hydda/data/world_boundaries/land_polygons.shp");
+    mml = mml.replace("http://tilemill-data.s3.amazonaws.com/osm/shoreline_300.zip", "/etc/mapnik-osm-data/hydda/data/world_boundaries/simplified_land_polygons.shp");
+    mml = mml.replaceAll("tile-sweden\\.openstreetmap\\.se", "postgis.virt");
 
     File fullFileMML = new File(path, "hydda_full.mml");
     File baseFileMML = new File(path, "hydda_base.mml");
