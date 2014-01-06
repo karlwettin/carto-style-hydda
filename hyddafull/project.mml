@@ -27,6 +27,7 @@
   "Layer": [
     {
       "Datasource": {
+        "user": "gis_ro",
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.3.0/physical/10m-land.zip",
@@ -67,6 +68,7 @@
     },
     {
       "Datasource": {
+        "user": "gis_ro",
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
@@ -88,6 +90,7 @@
     },
     {
       "Datasource": {
+        "user": "gis_ro",
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
@@ -109,6 +112,7 @@
     },
     {
       "Datasource": {
+        "user": "gis_ro",
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
@@ -142,6 +146,7 @@
         "key_field": "",
         "geometry_field": "way",
         "host": "tile-sweden.openstreetmap.se",
+        "user": "gis_ro",
         "dbname": "gis"
       },
       "id": "sports-grounds",
@@ -153,6 +158,7 @@
     },
     {
       "Datasource": {
+        "user": "gis_ro",
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
@@ -174,6 +180,7 @@
     },
     {
       "Datasource": {
+        "user": "gis_ro",
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
@@ -191,6 +198,7 @@
     },
     {
       "Datasource": {
+        "user": "gis_ro",
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
@@ -208,6 +216,7 @@
     },
     {
       "Datasource": {
+        "user": "gis_ro",
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
@@ -229,6 +238,7 @@
     },
     {
       "Datasource": {
+        "user": "gis_ro",
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
@@ -250,6 +260,7 @@
     },
     {
       "Datasource": {
+        "user": "gis_ro",
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
@@ -271,6 +282,7 @@
     },
     {
       "Datasource": {
+        "user": "gis_ro",
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
@@ -291,6 +303,7 @@
     },
     {
       "Datasource": {
+        "user": "gis_ro",
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
@@ -310,6 +323,7 @@
     },
     {
       "Datasource": {
+        "user": "gis_ro",
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
@@ -330,6 +344,7 @@
     },
     {
       "Datasource": {
+        "user": "gis_ro",
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
@@ -347,6 +362,7 @@
     },
     {
       "Datasource": {
+        "user": "gis_ro",
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
@@ -368,6 +384,7 @@
     },
     {
       "Datasource": {
+        "user": "gis_ro",
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
@@ -388,6 +405,7 @@
     },
     {
       "Datasource": {
+        "user": "gis_ro",
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
@@ -408,6 +426,7 @@
     },
     {
       "Datasource": {
+        "user": "gis_ro",
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
@@ -425,6 +444,7 @@
     },
     {
       "Datasource": {
+        "user": "gis_ro",
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
@@ -438,11 +458,11 @@
       "id": "roads_low",
       "name": "roads_low",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913",
-      "status": "on"
+      "srs-name": "900913"
     },
     {
       "Datasource": {
+        "user": "gis_ro",
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
@@ -460,6 +480,7 @@
     },
     {
       "Datasource": {
+        "user": "gis_ro",
         "dbname": "gis",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
@@ -502,6 +523,7 @@
         "key_field": "",
         "geometry_field": "way",
         "host": "tile-sweden.openstreetmap.se",
+        "user": "gis_ro",
         "dbname": "gis"
       },
       "id": "piers",
@@ -525,6 +547,7 @@
         "key_field": "",
         "geometry_field": "way",
         "host": "tile-sweden.openstreetmap.se",
+        "user": "gis_ro",
         "dbname": "gis"
       },
       "id": "piers-area",
@@ -536,6 +559,7 @@
     },
     {
       "Datasource": {
+        "user": "gis_ro",
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
@@ -557,6 +581,7 @@
     },
     {
       "Datasource": {
+        "user": "gis_ro",
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
@@ -578,6 +603,7 @@
     },
     {
       "Datasource": {
+        "user": "gis_ro",
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
@@ -599,6 +625,7 @@
     },
     {
       "Datasource": {
+        "user": "gis_ro",
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
@@ -620,6 +647,7 @@
     },
     {
       "Datasource": {
+        "user": "gis_ro",
         "dbname": "gis",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
@@ -649,6 +677,7 @@
     },
     {
       "Datasource": {
+        "user": "gis_ro",
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
@@ -683,6 +712,7 @@
         "extent_cache": "auto",
         "extent": "1179104.7,7387744.81,2697797.8,10772372.35",
         "host": "tile-sweden.openstreetmap.se",
+        "user": "gis_ro",
         "dbname": "gis"
       },
       "id": "island_label_polygon",
@@ -708,6 +738,7 @@
         "extent_cache": "auto",
         "extent": "500845.535961636,7198751.30242526,3469672.0123393,11466073.0683558",
         "host": "tile-sweden.openstreetmap.se",
+        "user": "gis_ro",
         "dbname": "gis"
       },
       "id": "island_label_point",
@@ -732,6 +763,7 @@
         "key_field": "",
         "geometry_field": "way",
         "host": "tile-sweden.openstreetmap.se",
+        "user": "gis_ro",
         "dbname": "gis"
       },
       "id": "housenames",
@@ -756,6 +788,7 @@
         "key_field": "",
         "geometry_field": "way",
         "host": "tile-sweden.openstreetmap.se",
+        "user": "gis_ro",
         "dbname": "gis"
       },
       "id": "housenumbers",
