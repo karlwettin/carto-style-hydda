@@ -59,9 +59,9 @@ public class Build {
     String baseStringXML = FileUtils.readFileToString(baseFileXML, "utf8");
     String roadsAndLabelsStringXML = FileUtils.readFileToString(roadsAndLabelsFileXML, "utf8");
 
-    fullStringXML = removeParameters(fullStringXML);
-    baseStringXML = removeParameters(baseStringXML);
-    roadsAndLabelsStringXML = removeParameters(roadsAndLabelsStringXML);
+//    fullStringXML = removeParameters(fullStringXML);
+//    baseStringXML = removeParameters(baseStringXML);
+//    roadsAndLabelsStringXML = removeParameters(roadsAndLabelsStringXML);
 
     FileUtils.write(fullFileXML, fullStringXML, "utf8");
     FileUtils.write(baseFileXML, baseStringXML, "utf8");
