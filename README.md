@@ -14,6 +14,6 @@ https://openstreetmap.se/#14/58.5988/11.2150 compared to https://www.openstreetm
 Colors are originally selected for working well with transparent red-yellow-green heat map overlays.
 
 Using Google Noto fonts (a fork of the OSM Carto font setup) rather than Open Sans as original in OSM Bright.
-``sudo apt-get install fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted ttf-unifont
+``sudo apt-get install fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted ttf-unifont``
 
 

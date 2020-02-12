@@ -27,10 +27,6 @@ public class Build {
     File projectFile = new File(path, "project.mml");
 
     String mml = FileUtils.readFileToString(projectFile, "utf8");
-    mml = mml.replace("http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.3.0/physical/10m-land.zip", "/etc/mapnik-osm-data/hydda/data/10m-land.shp");
-    mml = mml.replace("http://tilemill-data.s3.amazonaws.com/osm/coastline-good.zip", "/etc/mapnik-osm-data/hydda/data/world_boundaries/land_polygons.shp");
-    mml = mml.replace("http://tilemill-data.s3.amazonaws.com/osm/shoreline_300.zip", "/etc/mapnik-osm-data/hydda/data/world_boundaries/simplified_land_polygons.shp");
-    mml = mml.replaceAll("tile-sweden\\.openstreetmap\\.se", "localhost");
 
     File fullFileMML = new File(path, "hydda_full.mml");
     File baseFileMML = new File(path, "hydda_base.mml");

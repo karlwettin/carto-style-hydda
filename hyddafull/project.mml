@@ -27,52 +27,40 @@
   "Layer": [
     {
       "Datasource": {
-        "user": "gis_ro",
-        "dbname": "gis",
+        "dbname": "osm",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
-        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.3.0/physical/10m-land.zip",
-        "host": "tile-sweden.openstreetmap.se",
-        "id": "land",
-        "project": "foss4g-2011",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+        "file": "/home/renderaccount/hydda/data/simplified-land-polygons-complete-3857/simplified_land_polygons.shp",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "type": "shape"
       },
       "class": "shp",
       "geometry": "polygon",
-      "id": "land",
-      "name": "land",
+      "id": "land-low",
+      "name": "land-low",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
       "status": "on"
     },
     {
       "Datasource": {
-        "file": "http://tilemill-data.s3.amazonaws.com/osm/coastline-good.zip"
+        "file": "/home/renderaccount/hydda/data/land-polygons-split-3857/land_polygons.shp",
+        "type": "shape"
       },
       "class": "shp",
       "geometry": "polygon",
-      "id": "processed_p",
-      "name": "processed_p",
+      "id": "land-high",
+      "name": "land-high",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "900913",
+      "status": "on"
     },
     {
       "Datasource": {
-        "file": "http://tilemill-data.s3.amazonaws.com/osm/shoreline_300.zip"
-      },
-      "class": "shp",
-      "geometry": "polygon",
-      "id": "shoreline_300",
-      "name": "shoreline_300",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
-    },
-    {
-      "Datasource": {
-        "user": "gis_ro",
+        
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "tile-sweden.openstreetmap.se",
+        
         "id": "landuse_gen0",
         "key_field": "",
         "project": "osm-bright-imposm",
@@ -90,11 +78,11 @@
     },
     {
       "Datasource": {
-        "user": "gis_ro",
+        
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "tile-sweden.openstreetmap.se",
+        
         "id": "landuse_gen1",
         "key_field": "",
         "project": "osm-bright-imposm",
@@ -112,11 +100,11 @@
     },
     {
       "Datasource": {
-        "user": "gis_ro",
+        
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "tile-sweden.openstreetmap.se",
+        
         "id": "landuse",
         "key_field": "",
         "project": "osm-bright-imposm",
@@ -145,8 +133,8 @@
         "extent": "-20037508,-19929239,20037508,19929239",
         "key_field": "",
         "geometry_field": "way",
-        "host": "tile-sweden.openstreetmap.se",
-        "user": "gis_ro",
+        
+        
         "dbname": "gis"
       },
       "id": "sports-grounds",
@@ -158,11 +146,11 @@
     },
     {
       "Datasource": {
-        "user": "gis_ro",
+        
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "tile-sweden.openstreetmap.se",
+        
         "id": "waterway",
         "key_field": "",
         "project": "foss4g-2011",
@@ -180,11 +168,11 @@
     },
     {
       "Datasource": {
-        "user": "gis_ro",
+        
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "tile-sweden.openstreetmap.se",
+        
         "key_field": "",
         "table": "( SELECT way, waterway AS type\n  FROM planet_osm_line\n  WHERE waterway IN ('river', 'canal', 'stream')\n) AS data",
         "type": "postgis"
@@ -198,11 +186,11 @@
     },
     {
       "Datasource": {
-        "user": "gis_ro",
+        
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "tile-sweden.openstreetmap.se",
+        
         "key_field": "",
         "table": "( SELECT way, waterway AS type\n  FROM planet_osm_line\n  WHERE waterway IN ('river', 'canal', 'stream', 'ditch', 'drain')\n) AS data",
         "type": "postgis"
@@ -216,11 +204,11 @@
     },
     {
       "Datasource": {
-        "user": "gis_ro",
+        
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "tile-sweden.openstreetmap.se",
+        
         "id": "water_gen0",
         "key_field": "",
         "project": "foss4g-2011",
@@ -238,11 +226,11 @@
     },
     {
       "Datasource": {
-        "user": "gis_ro",
+        
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "tile-sweden.openstreetmap.se",
+        
         "id": "water_gen1",
         "key_field": "",
         "project": "foss4g-2011",
@@ -260,11 +248,11 @@
     },
     {
       "Datasource": {
-        "user": "gis_ro",
+        
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "tile-sweden.openstreetmap.se",
+        
         "id": "water",
         "key_field": "",
         "project": "foss4g-2011",
@@ -282,11 +270,11 @@
     },
     {
       "Datasource": {
-        "user": "gis_ro",
+        
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "tile-sweden.openstreetmap.se",
+        
         "id": "landuse_overlays",
         "key_field": "",
         "project": "osm-bright-imposm",
@@ -303,11 +291,11 @@
     },
     {
       "Datasource": {
-        "user": "gis_ro",
+        
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "tile-sweden.openstreetmap.se",
+        
         "id": "admin",
         "key_field": "",
         "project": "osm-bright-imposm",
@@ -323,11 +311,11 @@
     },
     {
       "Datasource": {
-        "user": "gis_ro",
+        
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "tile-sweden.openstreetmap.se",
+        
         "id": "tunnel",
         "key_field": "",
         "project": "osm-bright-master",
@@ -344,11 +332,11 @@
     },
     {
       "Datasource": {
-        "user": "gis_ro",
+        
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "tile-sweden.openstreetmap.se",
+        
         "key_field": "",
         "table": "( SELECT way, \"building\" AS type\n  FROM planet_osm_polygon\n  WHERE building NOT IN ('0','false', 'no')\n  ORDER BY ST_YMin(ST_Envelope(way)) DESC\n) AS data",
         "type": "postgis"
@@ -362,11 +350,11 @@
     },
     {
       "Datasource": {
-        "user": "gis_ro",
+        
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "tile-sweden.openstreetmap.se",
+        
         "id": "aeroway",
         "key_field": "",
         "project": "foss4g-2011",
@@ -384,11 +372,11 @@
     },
     {
       "Datasource": {
-        "user": "gis_ro",
+        
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "tile-sweden.openstreetmap.se",
+        
         "id": "turning_circle_case",
         "key_field": "",
         "project": "osm-bright-master",
@@ -405,11 +393,11 @@
     },
     {
       "Datasource": {
-        "user": "gis_ro",
+        
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "tile-sweden.openstreetmap.se",
+        
         "id": "roads_high",
         "key_field": "",
         "project": "osm-bright-master",
@@ -426,11 +414,11 @@
     },
     {
       "Datasource": {
-        "user": "gis_ro",
+        
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "tile-sweden.openstreetmap.se",
+        
         "key_field": "",
         "table": "( SELECT way, highway AS type\n  FROM planet_osm_roads\n  WHERE highway IN ('motorway', 'trunk', 'primary', 'secondary', 'motorway_link', 'trunk_link')\n) AS data",
         "type": "postgis"
@@ -444,11 +432,11 @@
     },
     {
       "Datasource": {
-        "user": "gis_ro",
+        
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "tile-sweden.openstreetmap.se",
+        
         "key_field": "",
         "table": "( SELECT way, highway AS type, bridge, tunnel\n    FROM planet_osm_roads\n    WHERE highway IN ('motorway', 'trunk')\n) AS data",
         "type": "postgis"
@@ -462,11 +450,11 @@
     },
     {
       "Datasource": {
-        "user": "gis_ro",
+        
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "tile-sweden.openstreetmap.se",
+        
         "key_field": "",
         "table": "( SELECT way \n  FROM planet_osm_point\n  WHERE highway = 'turning_circle'\n) AS data",
         "type": "postgis"
@@ -480,11 +468,11 @@
     },
     {
       "Datasource": {
-        "user": "gis_ro",
+        
         "dbname": "gis",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
-        "host": "tile-sweden.openstreetmap.se",
+        
         "id": "bridge",
         "key_field": "",
         "project": "osm-bright-master",
@@ -522,8 +510,8 @@
         "extent": "-20037508,-19929239,20037508,19929239",
         "key_field": "",
         "geometry_field": "way",
-        "host": "tile-sweden.openstreetmap.se",
-        "user": "gis_ro",
+        
+        
         "dbname": "gis"
       },
       "id": "piers",
@@ -546,8 +534,8 @@
         "extent": "-20037508,-19929239,20037508,19929239",
         "key_field": "",
         "geometry_field": "way",
-        "host": "tile-sweden.openstreetmap.se",
-        "user": "gis_ro",
+        
+        
         "dbname": "gis"
       },
       "id": "piers-area",
@@ -559,11 +547,11 @@
     },
     {
       "Datasource": {
-        "user": "gis_ro",
+        
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "tile-sweden.openstreetmap.se",
+        
         "id": "place",
         "key_field": "",
         "project": "foss4g-2011",
@@ -581,11 +569,11 @@
     },
     {
       "Datasource": {
-        "user": "gis_ro",
+        
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "tile-sweden.openstreetmap.se",
+        
         "id": "landuse_label",
         "key_field": "",
         "project": "foss4g-2011",
@@ -603,11 +591,11 @@
     },
     {
       "Datasource": {
-        "user": "gis_ro",
+        
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "tile-sweden.openstreetmap.se",
+        
         "id": "motorway_label",
         "key_field": "",
         "project": "foss4g-2011",
@@ -625,11 +613,11 @@
     },
     {
       "Datasource": {
-        "user": "gis_ro",
+        
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "tile-sweden.openstreetmap.se",
+        
         "id": "mainroad_label",
         "key_field": "",
         "project": "foss4g-2011",
@@ -647,11 +635,11 @@
     },
     {
       "Datasource": {
-        "user": "gis_ro",
+        
         "dbname": "gis",
         "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
-        "host": "tile-sweden.openstreetmap.se",
+        
         "id": "minorroad_label",
         "key_field": "",
         "project": "foss4g-2011",
@@ -677,11 +665,11 @@
     },
     {
       "Datasource": {
-        "user": "gis_ro",
+        
         "dbname": "gis",
         "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
         "geometry_field": "way",
-        "host": "tile-sweden.openstreetmap.se",
+        
         "id": "waterway_label",
         "key_field": "",
         "project": "foss4g-2011",
@@ -711,8 +699,8 @@
         "geometry_field": "way",
         "extent_cache": "auto",
         "extent": "1179104.7,7387744.81,2697797.8,10772372.35",
-        "host": "tile-sweden.openstreetmap.se",
-        "user": "gis_ro",
+        
+        
         "dbname": "gis"
       },
       "id": "island_label_polygon",
@@ -737,8 +725,8 @@
         "geometry_field": "",
         "extent_cache": "auto",
         "extent": "500845.535961636,7198751.30242526,3469672.0123393,11466073.0683558",
-        "host": "tile-sweden.openstreetmap.se",
-        "user": "gis_ro",
+        
+        
         "dbname": "gis"
       },
       "id": "island_label_point",
@@ -762,8 +750,8 @@
         "extent": "-20037508,-19929239,20037508,19929239",
         "key_field": "",
         "geometry_field": "way",
-        "host": "tile-sweden.openstreetmap.se",
-        "user": "gis_ro",
+        
+        
         "dbname": "gis"
       },
       "id": "housenames",
@@ -787,8 +775,8 @@
         "extent": "-20037508,-19929239,20037508,19929239",
         "key_field": "",
         "geometry_field": "way",
-        "host": "tile-sweden.openstreetmap.se",
-        "user": "gis_ro",
+        
+        
         "dbname": "gis"
       },
       "id": "housenumbers",
