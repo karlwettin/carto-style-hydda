@@ -769,8 +769,8 @@
   ],
   "scale": 1,
   "metatile": 2,
-  "attribution": "Data © OpenStreetMap (and) contributors, CC-BY-SA",
-  "description": "",
-  "name": "hydda full",
+  "attribution": "Data OpenStreetMap (and) contributors",
+  "description": "OSM Bright based style hosted by OpenStreetMap Sweden",
+  "name": "hydda",
   "legend": ""
 }
