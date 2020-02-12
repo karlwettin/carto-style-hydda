@@ -1,4 +1,4 @@
-tilemill-style-hydda
+carto-style-hydda
 ====================
 
 Hydda, a carto style project used by OpenStreetMap Sweden.
