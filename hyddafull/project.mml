@@ -562,7 +562,7 @@
         "id": "landuse_label",
         "key_field": "",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type,\n    name, way_area AS area,\n    ST_PointOnSurface(way) AS way\n  FROM planet_osm_polygon\n  WHERE name IS NOT NULL\n    AND ST_SetSRID(way,900913) && !bbox!\n    AND ST_IsValid(way)\n\n  UNION ALL\n\n  SELECT 'building' AS type, name, way_area AS area,\n    ST_PointOnSurface(way) AS way\n  FROM planet_osm_polygon\n  WHERE name IS NOT NULL\n    AND building NOT IN ('', 'no', '0', 'false')\n    AND ST_SetSRID(way,900913) && !bbox!\n    AND ST_IsValid(way)\n  ORDER BY area DESC\n) AS data",
+        "table": "( SELECT COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type,\n    name, way_area AS area,\n    ST_PointOnSurface(way) AS way\n  FROM planet_osm_polygon\n  WHERE name IS NOT NULL\n   AND way && !bbox!\n\n  UNION ALL\n\n  SELECT 'building' AS type, name, way_area AS area,\n    ST_PointOnSurface(way) AS way\n  FROM planet_osm_polygon\n  WHERE name IS NOT NULL\n    AND building NOT IN ('', 'no', '0', 'false')\n    AND way && !bbox!\n  ORDER BY area DESC\n) AS data",
         "type": "postgis"
       },
       "class": "",
@@ -674,13 +674,11 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "( SELECT\n    place, name, way_area AS area,\n    ST_PointOnSurface(way) AS way\n  FROM planet_osm_polygon\n  WHERE name IS NOT NULL\n    AND (place = 'island' OR place='islet')\n    AND ST_SetSRID(way,900913) && !bbox!\n    AND ST_IsValid(way)\n  ORDER BY area DESC\n) AS data",
+        "table": "( SELECT\n    place, name, way_area AS area,\n    ST_PointOnSurface(way) AS way\n  FROM planet_osm_polygon\n  WHERE name IS NOT NULL\n    AND (place = 'island' OR place='islet')\n    AND way && !bbox!\n  ORDER BY area DESC\n) AS data",
         "key_field": "",
         "geometry_field": "way",
         "extent_cache": "auto",
         "extent": "1179104.7,7387744.81,2697797.8,10772372.35",
-        
-        
         "dbname": "gis"
       },
       "id": "island_label_polygon",
@@ -700,7 +698,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "( SELECT\n    place, name,\n    ST_PointOnSurface(way) AS way\n  FROM planet_osm_point\n  WHERE name IS NOT NULL\n    AND (place = 'island' OR place='islet')\n    AND ST_SetSRID(way,900913) && !bbox!\n    AND ST_IsValid(way)\n) AS data",
+        "table": "( SELECT\n    place, name,\n    ST_PointOnSurface(way) AS way\n  FROM planet_osm_point\n  WHERE name IS NOT NULL\n    AND (place = 'island' OR place='islet')\n    AND way && !bbox!\n) AS data",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",
