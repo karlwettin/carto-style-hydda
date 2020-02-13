@@ -1,28 +1,15 @@
 -- This is a list of indices recommended for your PostgreSQL when hosting Hydda styles.
 -- Commented out are indices recommended if you also host the default OpenStreetMap-Carto style.
 
--- Area indices.
--- Without these, expect any tile to take 15 minutes to render for full/roads and labels.
-CREATE INDEX planet_osm_polygon_way_area_102400000 ON planet_osm_polygon USING GIST (way) WHERE way_area > 102400000;
-CREATE INDEX planet_osm_polygon_way_area_25600000 ON planet_osm_polygon USING GIST (way) WHERE way_area > 25600000;
-CREATE INDEX planet_osm_polygon_way_area_2000000 ON planet_osm_polygon USING GIST (way) WHERE way_area > 2000000;
-CREATE INDEX planet_osm_polygon_way_area_1600000 ON planet_osm_polygon USING GIST (way) WHERE way_area > 1600000;
-CREATE INDEX planet_osm_polygon_way_area_1280000 ON planet_osm_polygon USING GIST (way) WHERE way_area > 1280000;
-CREATE INDEX planet_osm_polygon_way_area_640000 ON planet_osm_polygon USING GIST (way) WHERE way_area > 640000;
-CREATE INDEX planet_osm_polygon_way_area_500000 ON planet_osm_polygon USING GIST (way) WHERE way_area > 500000;
-CREATE INDEX planet_osm_polygon_way_area_320000 ON planet_osm_polygon USING GIST (way) WHERE way_area > 320000;
-CREATE INDEX planet_osm_polygon_way_area_240000 ON planet_osm_polygon USING GIST (way) WHERE way_area > 240000;
-CREATE INDEX planet_osm_polygon_way_area_200000 ON planet_osm_polygon USING GIST (way) WHERE way_area > 200000;
-CREATE INDEX planet_osm_polygon_way_area_90000 ON planet_osm_polygon USING GIST (way) WHERE way_area > 90000;
-CREATE INDEX planet_osm_polygon_way_area_80000 ON planet_osm_polygon USING GIST (way) WHERE way_area > 80000;
-CREATE INDEX planet_osm_polygon_way_area_50000 ON planet_osm_polygon USING GIST (way) WHERE way_area > 50000;
-CREATE INDEX planet_osm_polygon_way_area_20000 ON planet_osm_polygon USING GIST (way) WHERE way_area > 20000;
-CREATE INDEX planet_osm_polygon_way_area_10000 ON planet_osm_polygon USING GIST (way) WHERE way_area > 10000;
-CREATE INDEX planet_osm_polygon_way_area_5000 ON planet_osm_polygon USING GIST (way) WHERE way_area > 5000;
-CREATE INDEX planet_osm_polygon_way_area_2500 ON planet_osm_polygon USING GIST (way) WHERE way_area > 2500;
-CREATE INDEX planet_osm_polygon_way_area_0 ON planet_osm_polygon USING GIST (way) WHERE way_area >= 0;
---CREATE INDEX planet_osm_polygon_way_area_z10 ON planet_osm_polygon USING GIST (way) WHERE way_area > 23300;
---CREATE INDEX planet_osm_polygon_way_area_z6 ON planet_osm_polygon USING GIST (way) WHERE way_area > 5980000;
+-- Area label related indices.
+CREATE INDEX idx_hydda_area_label_a1 ON planet_osm_polygon USING gist (way) WHERE name IS NOT NULL AND building NOT IN ('', 'no', '0', 'false');
+CREATE INDEX idx_hydda_area_label_b2 ON planet_osm_polygon USING gist (way) WHERE name IS NOT NULL;
+
+CREATE INDEX idx_hydda_osm_polygon_way_area_100000 ON planet_osm_polygon USING GIST (way) WHERE way_area > 100000;
+CREATE INDEX idx_hydda_planet_osm_polygon_way_area_10000 ON planet_osm_polygon USING GIST (way) WHERE way_area > 10000;
+CREATE INDEX idx_hydda_planet_osm_polygon_way_area_1000 ON planet_osm_polygon USING GIST (way) WHERE way_area > 1000;
+--CREATE INDEX idx_planet_osm_polygon_way_area_z10 ON planet_osm_polygon USING GIST (way) WHERE way_area > 23300;
+--CREATE INDEX idx_planet_osm_polygon_way_area_z6 ON planet_osm_polygon USING GIST (way) WHERE way_area > 5980000;
 
 
 -- Indices on planet_osm_polygon
@@ -77,6 +64,7 @@ CREATE INDEX "idx_point_waterway" on planet_osm_point  USING gist (way) WHERE "w
 --CREATE INDEX "idx_point_lock" on planet_osm_point  USING gist (way) WHERE "lock" IS NOT NULL ;
 CREATE INDEX "idx_point_landuse" on planet_osm_point  USING gist (way) WHERE "landuse" IS NOT NULL ;
 --CREATE INDEX "idx_point_military" on planet_osm_point  USING gist (way) WHERE "military" IS NOT NULL ;
+
 
 
 
