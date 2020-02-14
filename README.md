@@ -67,6 +67,38 @@ Hydda is primarily using the Google Noto fonts.
 Don't be scared by the warnings when starting renderd, the fonts are named differently in multiple Linux distributions
 and are therefore included using multiple names to work on all systems. They are not missing if you installed the above packages.
 
+```
+Mapnik LOG> 2020-02-14 23:57:42: warning: unable to find face-name 'Noto Sans CJK JP Regular' in FontSet 'fontset-0'
+Mapnik LOG> 2020-02-14 23:57:42: warning: unable to find face-name 'Noto Serif Tibetan Regular' in FontSet 'fontset-0'
+Mapnik LOG> 2020-02-14 23:57:42: warning: unable to find face-name 'Noto Emoji Regular' in FontSet 'fontset-0'
+Mapnik LOG> 2020-02-14 23:57:42: warning: unable to find face-name 'HanaMinA Regular' in FontSet 'fontset-0'
+Mapnik LOG> 2020-02-14 23:57:42: warning: unable to find face-name 'HanaMinB Regular' in FontSet 'fontset-0'
+Mapnik LOG> 2020-02-14 23:57:42: warning: unable to find face-name 'unifont Medium' in FontSet 'fontset-0'
+Mapnik LOG> 2020-02-14 23:57:42: warning: unable to find face-name 'Noto Sans CJK JP Bold' in FontSet 'fontset-1'
+Mapnik LOG> 2020-02-14 23:57:42: warning: unable to find face-name 'Noto Serif Tibetan Bold' in FontSet 'fontset-1'
+Mapnik LOG> 2020-02-14 23:57:42: warning: unable to find face-name 'Noto Sans CJK JP Regular' in FontSet 'fontset-1'
+Mapnik LOG> 2020-02-14 23:57:42: warning: unable to find face-name 'Noto Serif Tibetan Regular' in FontSet 'fontset-1'
+Mapnik LOG> 2020-02-14 23:57:42: warning: unable to find face-name 'Noto Emoji Regular' in FontSet 'fontset-1'
+Mapnik LOG> 2020-02-14 23:57:42: warning: unable to find face-name 'HanaMinA Regular' in FontSet 'fontset-1'
+Mapnik LOG> 2020-02-14 23:57:42: warning: unable to find face-name 'HanaMinB Regular' in FontSet 'fontset-1'
+Mapnik LOG> 2020-02-14 23:57:42: warning: unable to find face-name 'unifont Medium' in FontSet 'fontset-1'
+Mapnik LOG> 2020-02-14 23:57:42: warning: unable to find face-name 'Noto Sans CJK JP Bold' in FontSet 'fontset-2'
+Mapnik LOG> 2020-02-14 23:57:42: warning: unable to find face-name 'Noto Serif Tibetan Bold' in FontSet 'fontset-2'
+Mapnik LOG> 2020-02-14 23:57:42: warning: unable to find face-name 'Noto Sans CJK JP Regular' in FontSet 'fontset-2'
+Mapnik LOG> 2020-02-14 23:57:42: warning: unable to find face-name 'Noto Serif Tibetan Regular' in FontSet 'fontset-2'
+Mapnik LOG> 2020-02-14 23:57:42: warning: unable to find face-name 'Noto Emoji Regular' in FontSet 'fontset-2'
+Mapnik LOG> 2020-02-14 23:57:42: warning: unable to find face-name 'HanaMinA Regular' in FontSet 'fontset-2'
+Mapnik LOG> 2020-02-14 23:57:42: warning: unable to find face-name 'HanaMinB Regular' in FontSet 'fontset-2'
+Mapnik LOG> 2020-02-14 23:57:42: warning: unable to find face-name 'unifont Medium' in FontSet 'fontset-2'
+Mapnik LOG> 2020-02-14 23:57:42: warning: unable to find face-name 'Noto Sans CJK JP Regular' in FontSet 'fontset-3'
+Mapnik LOG> 2020-02-14 23:57:42: warning: unable to find face-name 'Noto Serif Tibetan Regular' in FontSet 'fontset-3'
+Mapnik LOG> 2020-02-14 23:57:42: warning: unable to find face-name 'Noto Emoji Regular' in FontSet 'fontset-3'
+Mapnik LOG> 2020-02-14 23:57:42: warning: unable to find face-name 'HanaMinA Regular' in FontSet 'fontset-3'
+Mapnik LOG> 2020-02-14 23:57:42: warning: unable to find face-name 'HanaMinB Regular' in FontSet 'fontset-3'
+Mapnik LOG> 2020-02-14 23:57:42: warning: unable to find face-name 'unifont Medium' in FontSet 'fontset-3'
+```
+
+
 #### Land polygons
 Hydda use land polygons as background, i.e. the inverse of coastlines. They are available to download from [OpenStreetMap Germany data archive](https://osmdata.openstreetmap.de/data/land-polygons.html):
 
