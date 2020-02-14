@@ -171,3 +171,4 @@ There is much that can be done to improve this style further.
   * Perhaps capitals only at z2?
   * Prioritize cities with great population
 * OSM is missing most all forest, e.g. no Taiga nor Amazon. Attempt to find a coarse data set with polygons that can be cut at coastlines and make holes for mountains and lakes, for use at z0-z9 or so.
+* Find a fitting non-green color schema for desserts and dry land. Lighter shades of grey?
