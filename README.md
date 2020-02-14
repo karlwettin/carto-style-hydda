@@ -43,10 +43,10 @@ Archipelagos of Fjällbacka using Hydda.
 ![Archipelagos of Fjällbacka using OSM-carto](https://raw.githubusercontent.com/karlwettin/carto-style-hydda/master/docs/screenshots/archipelagos_osm.png)
 Archipelagos of Fjällbacka using OSM-carto.
 
-### Building and installation
+### Building and installing
 OpenStreetMap Sweden is as of february 2020 rendering Hydda styles on an Ubuntu 18.04 LTS from source as described by [switch2osm](https://switch2osm.org/serving-tiles/manually-building-a-tile-server-18-04-lts/).
 
-The local user ``renderaccunt`` owning mod_tile and the PostgreSQL database ``gis``. 
+The local user ``renderaccunt`` owns mod_tile and the PostgreSQL database ``gis``. 
 All Hydda related data is stored in ``~renderaccount/hydda/`` and this is a hardcoded path in the style. You might want to change this to fit your needs.
 
 
