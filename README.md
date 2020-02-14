@@ -49,6 +49,10 @@ OpenStreetMap Sweden is as of february 2020 rendering Hydda styles on an Ubuntu 
 The local user ``renderaccunt`` owns mod_tile and the PostgreSQL database ``gis``. 
 All Hydda related data is stored in ``~renderaccount/hydda/`` and this is a hardcoded path in the style. You might want to change this to fit your needs.
 
+```
+cd ~renderuser/src
+git clone https://github.com/karlwettin/carto-style-hydda.git
+```
 
 #### osm2pgsql
 Hydda doesn't contain an own transform script and style for osm2pgsql, but you can use the one provided by [OpenStreetMap-Carto](https://github.com/gravitystorm/openstreetmap-carto).
@@ -58,7 +62,7 @@ Hydda doesn't contain an own transform script and style for osm2pgsql, but you c
 #### Fonts
 Hydda is primarily using the Google Noto fonts.
 
-``sudo apt-get install fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted ttf-unifont``
+``sudo apt install fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted ttf-unifont``
 
 Don't be scared by the warnings when starting renderd, the fonts are named differently in multiple Linux distributions
 and are therefore included using multiple names to work on all systems. They are not missing if you installed the above packages.
@@ -95,7 +99,7 @@ renderaccount@tile-server:/home/renderaccount/hydda/data$ find ./
 ```
 
 #### PostGIS indices
-It is recommended to create the database indices listed in [create_indices](https://raw.githubusercontent.com/karlwettin/carto-style-hydda/master/create_indices.sql).
+It is recommended to create the database indices listed in [create_indices.sql](https://raw.githubusercontent.com/karlwettin/carto-style-hydda/master/create_indices.sql).
 
 ``psql -d gis -f create_indices.sql``
 
@@ -103,6 +107,14 @@ On a planet database this might take many hours.
 
 #### Java build
 If executing carto on project.mml you'll get Hydda the full style. You can also go to ``build`` and execute ``build.sh`` (given you have a JDK and Maven installed) which will produce all three styles in that directory. Copy them to ``~renderuser/hydda 
+
+``sudo apt install openjdk-11-jdk maven``
+
+```
+cd ~renderuser/src/hydda/build/
+./build.sh
+```
+
 
 #### renderd.conf
 Our renderd.conf looks as following:
@@ -150,3 +162,12 @@ HOST=localhost
 TILESIZE=256
 MAXZOOM=20
 ```
+
+### Todo
+
+There is much that can be done to improve this style further.
+* Add large lakes at z0-z3.
+* Better selection of cities. 
+  * Perhaps capitals only at z2?
+  * Prioritize cities with great population
+* OSM is missing most all forest, e.g. no Taiga nor Amazon. Attempt to find a coarse data set with polygons that can be cut at coastlines and make holes for mountains and lakes, for use at z0-z9 or so.
