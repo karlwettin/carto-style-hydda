@@ -25,7 +25,7 @@ Hydda base-layer overlooking the Øresund region between Denmark and southern Sw
 Hydda roads and labels-layer overlooking the Øresund region between Denmark and southern Sweden.
  
 ![Multi layered real estate for sale in Stockholm](https://raw.githubusercontent.com/karlwettin/carto-style-hydda/master/docs/screenshots/real_estate_stockholm.png)
-The idea with the three layers is to allow for adding visual information in between of the base and roads/labels. This is an image with a heat map of real estate prices in and around Stockholm. The colors of the Hydda style has been selected specifically to work well with green-yellow-red overlays.
+The idea with the three layers is to allow for adding visual information in between of the base and roads/labels. I.e. it makes roads and labels clearly visible rather than hidden underneath a semi transparent overlay. This is an image with a heat map of real estate prices in and around Stockholm. The colors of the Hydda style has been selected specifically to work well with green-yellow-red overlays.
 
 ![At lower zoom levels there are no streets](https://raw.githubusercontent.com/karlwettin/carto-style-hydda/master/docs/screenshots/no_streets.png)
 At low zoom levels minor streets are not rendered. In populated areas streets are however implicit between building blocks. 
