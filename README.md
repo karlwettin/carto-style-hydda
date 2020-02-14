@@ -10,35 +10,35 @@ Originally based on an old version of [OSMBright](https://github.com/mapbox/osm-
 
 ### Screenshots
 
-![There are no administrative borders](https://raw.githubusercontent.com/karlwettin/carto-style-hydda/master/docs/screenshots/countries.png)
+![There are no administrative borders](https://raw.githubusercontent.com/karlwettin/carto-style-hydda/master/docs/screenshots/countries_out-0.png)
 There are no administrative borders. Country names are visible at low zoom levels, and city names might look somewhat disorganized.
 
 The style is split in three layers: the base-layer, the transparent roads and labels-layer and the composite full-layer which contains both the base, roads and labels.
 
-![Fully styled map of the Øresund region](https://raw.githubusercontent.com/karlwettin/carto-style-hydda/master/docs/screenshots/full_oresund.png)
+![Fully styled map of the Øresund region](https://raw.githubusercontent.com/karlwettin/carto-style-hydda/master/docs/screenshots/full_oresund_out-0.png)
 Hydda full-layer overlooking the Øresund region between Denmark and southern Sweden.
 
-![Base map of the Øresund region](https://raw.githubusercontent.com/karlwettin/carto-style-hydda/master/docs/screenshots/base_oresund.png)
+![Base map of the Øresund region](https://raw.githubusercontent.com/karlwettin/carto-style-hydda/master/docs/screenshots/base_oresund_out-0.png)
 Hydda base-layer overlooking the Øresund region between Denmark and southern Sweden.
 
-![Roads and labels map of the Øresund region](https://raw.githubusercontent.com/karlwettin/carto-style-hydda/master/docs/screenshots/roads_and_labels_oresund.png)
+![Roads and labels map of the Øresund region](https://raw.githubusercontent.com/karlwettin/carto-style-hydda/master/docs/screenshots/roads_and_labels_oresund_out-0.png)
 Hydda roads and labels-layer overlooking the Øresund region between Denmark and southern Sweden.
  
-![Multi layered real estate for sale in Stockholm](https://raw.githubusercontent.com/karlwettin/carto-style-hydda/master/docs/screenshots/real_estate_stockholm.png)
+![Multi layered real estate for sale in Stockholm](https://raw.githubusercontent.com/karlwettin/carto-style-hydda/master/docs/screenshots/real_estate_stockholm_out-0.png)
 The idea with the three layers is to allow for adding visual information in between of the base and roads/labels. I.e. it makes roads and labels clearly visible rather than hidden underneath a semi transparent overlay. This is an image with a heat map of real estate prices in and around Stockholm. The colors of the Hydda style has been selected specifically to work well with green-yellow-red overlays.
 
-![At lower zoom levels there are no streets](https://raw.githubusercontent.com/karlwettin/carto-style-hydda/master/docs/screenshots/no_streets.png)
+![At lower zoom levels there are no streets](https://raw.githubusercontent.com/karlwettin/carto-style-hydda/master/docs/screenshots/no_streets_out-0.png)
 At low zoom levels minor streets are not rendered. In populated areas streets are however implicit between building blocks. 
 
-![Streets are visible at greater zoom levels](https://raw.githubusercontent.com/karlwettin/carto-style-hydda/master/docs/screenshots/streets.png)
+![Streets are visible at greater zoom levels](https://raw.githubusercontent.com/karlwettin/carto-style-hydda/master/docs/screenshots/streets_out-0.png)
 Minor streets become visible first at a greater zoom level.
 
 The Hydda style differs from OSM Bright and OSM-carto, which Hydda is based on, in the way that it has improvements related to geographic features of Sweden. This might be a problem in other areas of the world.
  
-![Archipelagos of Fjällbacka using Hydda](https://raw.githubusercontent.com/karlwettin/carto-style-hydda/master/docs/screenshots/archipelagos_hydda.png)
+![Archipelagos of Fjällbacka using Hydda](https://raw.githubusercontent.com/karlwettin/carto-style-hydda/master/docs/screenshots/archipelagos_hydda_out-0.png)
 Archipelagos of Fjällbacka using Hydda.
 
-![Archipelagos of Fjällbacka using OSM-carto](https://raw.githubusercontent.com/karlwettin/carto-style-hydda/master/docs/screenshots/archipelagos_osm.png)
+![Archipelagos of Fjällbacka using OSM-carto](https://raw.githubusercontent.com/karlwettin/carto-style-hydda/master/docs/screenshots/archipelagos_osm_out-0.png)
 Archipelagos of Fjällbacka using OSM-carto.
 
 ### Building and installation
