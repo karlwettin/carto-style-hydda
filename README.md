@@ -46,7 +46,7 @@ Archipelagos of Fjällbacka using OSM-carto.
 Hydda is using the Google Noto fonts.
 ``sudo apt-get install fonts-noto-cjk fonts-noto-hinted fonts-noto-unhinted ttf-unifont``
 Don't be scared by the warnings when starting renderd, the fonts are named differently in multiple Linux distributions
-and are therefor included using multiple names to work on all systems. They are not missing if you installed the above packages.
+and are therefore included using multiple names to work on all systems. They are not missing if you installed the above packages.
 
 TODO 
 * Java build
