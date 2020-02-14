@@ -170,5 +170,6 @@ There is much that can be done to improve this style further.
 * Better selection of cities. 
   * Perhaps capitals only at z2?
   * Prioritize cities with great population
+  * Problematic to find places in northern Norway, Sweden and Finland. Should show up at lower zoom when no other larger cities are showing up in a tile.
 * OSM is missing most all forest, e.g. no Taiga nor Amazon. Attempt to find a coarse data set with polygons that can be cut at coastlines and make holes for mountains and lakes, for use at z0-z9 or so.
 * Find a fitting non-green color schema for desserts and dry land. Lighter shades of grey?
