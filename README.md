@@ -9,6 +9,8 @@ https://openstreetmap.se/#4/63.94/18.68
 Originally based on an old version of [OSMBright](https://github.com/mapbox/osm-bright) but patched to add more features such as piers, stadiums, pitches, and more. Nowadays also contains cherry picked details from [OpenStreetMap-Carto](https://github.com/gravitystorm/openstreetmap-carto).  
 
 ### Screenshots
+(Sorry, GitHub scales these screenshots due to width. I'll have to create new images that are 900px wide.)
+
 
 ![There are no administrative borders](https://raw.githubusercontent.com/karlwettin/carto-style-hydda/master/docs/screenshots/countries.png)
 There are no administrative borders. Country names are visible at low zoom levels, and city names might look somewhat disorganized.
