@@ -171,5 +171,7 @@ There is much that can be done to improve this style further.
   * Perhaps capitals only at z2?
   * Prioritize cities with great population
   * Problematic to find places in northern Norway, Sweden and Finland. Should show up at lower zoom when no other larger cities are showing up in a tile.
-* OSM is missing most all forest, e.g. no Taiga nor Amazon. Attempt to find a coarse data set with polygons that can be cut at coastlines and make holes for mountains and lakes, for use at z0-z9 or so.
+* OSM is missing most all forest, e.g. no Taiga nor Amazon. 
+   * Attempt to find a coarse data set with polygons that can be cut at coastlines and make holes for mountains and lakes, for use at z0-z9 or so.
+   * Take a look at the [FAO coverage map](http://www.fao.org/fileadmin/user_upload/FRA/images/Maps_figures_2005/2.jpg). What's the license? We could trace that. See (https://mapwarper.net/maps/45637#Preview_Rectified_Map_tab)[MapWarper project].
 * Find a fitting non-green color schema for desserts and dry land. Lighter shades of grey?
