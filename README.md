@@ -71,7 +71,7 @@ As user ``renderaccount``, download the two zip-files and extract them to ``~ren
 
 You should now have a file structure that looks as following:
 
-``
+```
 renderaccount@tile-server:/home/renderaccount/hydda/data$ find ./
 ./
 ./simplified-land-polygons-complete-3857
@@ -90,7 +90,7 @@ renderaccount@tile-server:/home/renderaccount/hydda/data$ find ./
 ./land-polygons-split-3857/land_polygons.prj
 ./land-polygons-split-3857/land_polygons.cpg
 ./land-polygons-split-3857/land_polygons.index
-``
+```
 
 #### PostGIS indices
 It is recommended to create the database indices listed in [create_indices](https://raw.githubusercontent.com/karlwettin/carto-style-hydda/master/create_indices.sql).
@@ -105,7 +105,7 @@ If executing carto on project.mml you'll get Hydda the full style. You can also 
 #### renderd.conf
 Our renderd.conf looks as following:
 
-``
+```
 [renderd]
 num_threads=16
 tile_dir=/var/lib/mod_tile
@@ -147,4 +147,4 @@ XML=/home/renderaccount/hydda/hydda_roads_and_labels.xml
 HOST=localhost
 TILESIZE=256
 MAXZOOM=20
-``
+```
