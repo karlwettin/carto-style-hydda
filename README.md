@@ -28,7 +28,7 @@ Hydda roads and labels-layer overlooking the Øresund region between Denmark and
 The idea with the three layers is to allow for adding visual information in between of the base and roads/labels. This is an image with a heat map of real estate prices in and around Stockholm. The colors of the Hydda style has been selected specifically to work well with green-yellow-red overlays.
 
 ![At lower zoom levels there are no streets](https://raw.githubusercontent.com/karlwettin/carto-style-hydda/master/docs/screenshots/no_streets.png)
-At low zoom levels minor streets are not rendered. In populated areas streets are however implicit as areas in between building blocks. 
+At low zoom levels minor streets are not rendered. In populated areas streets are however implicit between building blocks. 
 
 ![Streets are visible at greater zoom levels](https://raw.githubusercontent.com/karlwettin/carto-style-hydda/master/docs/screenshots/streets.png)
 Minor streets become visible first at a greater zoom level.
