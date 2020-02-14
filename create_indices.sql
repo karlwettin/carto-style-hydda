@@ -10,7 +10,7 @@ CREATE INDEX "idx_hydda_water_gen0" ON planet_osm_polygon USING gist (way) WHERE
 CREATE INDEX "idx_hydda_water_gen1" ON planet_osm_polygon USING gist (way) WHERE ("natural" IN ('water', 'pond') OR waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'riverbank', 'stream')) AND way_area > 1000;
 CREATE INDEX "idx_hydda_water" ON planet_osm_polygon USING gist (way) WHERE "natural" IN ('water', 'pond') OR waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'riverbank', 'stream');
 CREATE INDEX "idx_hydda_landuse_overlays" ON planet_osm_polygon USING gist (way) WHERE leisure = 'nature_reserve';
-CREATE INDEX "idx_hydda_admin" ON planet_osm_line USING gist (way) WHERE boundary = 'administrative' AND admin_level IN ('2','3','4'));
+CREATE INDEX "idx_hydda_admin" ON planet_osm_line USING gist (way) WHERE boundary = 'administrative' AND admin_level IN ('2','3','4');
 CREATE INDEX "idx_hydda_tunnel" ON planet_osm_line USING gist (way) WHERE tunnel NOT IN ('', '0', 'no');
 CREATE INDEX "idx_hydda_buildings" ON planet_osm_polygon USING gist (way) WHERE building NOT IN ('0','false', 'no');
 CREATE INDEX "idx_hydda_aeroway" ON planet_osm_line USING gist (way) WHERE aeroway IN ('apron', 'runway', 'taxiway');
