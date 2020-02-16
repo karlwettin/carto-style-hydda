@@ -1,7 +1,7 @@
 carto-style-hydda
 ====================
 
-Hydda, a carto style project used by OpenStreetMap Sweden.
+Hydda, a carto stylesheet project used by OpenStreetMap Sweden.
 https://openstreetmap.se/#4/63.94/18.68
 
 ### About
