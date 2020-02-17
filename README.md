@@ -138,12 +138,12 @@ It is recommended to create the database indices listed in [create_indices.sql](
 On a planet database this might take many hours.
 
 #### Java build
-If executing carto on project.mml you'll get Hydda the full style. You can also go to ``build`` and execute ``build.sh`` (given you have a JDK and Maven installed) which will produce all three styles in that directory. Copy them to ``~renderuser/hydda 
+If executing carto on project.mml you'll get Hydda the full style. You can also go to ``build`` and execute ``build.sh`` (given you have a JDK and Maven installed) which will produce all three styles in that directory. Copy them to ``~renderaccount/hydda 
 
 ``sudo apt install openjdk-11-jdk maven``
 
 ```
-cd ~renderuser/src/hydda/build/
+cd ~renderaccount/src/hydda/build/
 ./build.sh
 ```
 
