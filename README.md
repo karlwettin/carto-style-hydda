@@ -8,6 +8,17 @@ https://openstreetmap.se/#4/63.94/18.68
 
 Originally based on an old version of [OSMBright](https://github.com/mapbox/osm-bright) but patched to add more features such as piers, stadiums, pitches, and more. Nowadays also contains cherry picked details from [OpenStreetMap-Carto](https://github.com/gravitystorm/openstreetmap-carto).  
 
+### Attribution
+
+Please use add a reference to this page when using this style:
+
+```
+var Hydda_Full = L.tileLayer('https://{s}.tile.openstreetmap.se/hydda/full/{z}/{x}/{y}.png', {
+    maxZoom: 20,
+    attribution: '<a href="https://github.com/karlwettin/carto-style-hydda" target="_blank">Hydda</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+});
+```
+
 ### Screenshots
 (Sorry, GitHub scales these screenshots due to width. I'll have to create new images that are 900px wide.)
 
