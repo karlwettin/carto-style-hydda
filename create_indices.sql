@@ -1,4 +1,5 @@
 -- This is a list of indices recommended for your PostgreSQL when hosting Hydda styles.
+-- They are manually constructed from the SQL in project.mml and should be thus be updated on changes in SQL.
 
 CREATE INDEX "idx_hydda_landuse_gen0" ON planet_osm_polygon USING gist (way) WHERE way_area > 100000;
 CREATE INDEX "idx_hydda_landuse_gen1" ON planet_osm_polygon USING gist (way) WHERE way_area > 10000;
