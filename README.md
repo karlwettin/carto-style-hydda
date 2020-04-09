@@ -10,7 +10,7 @@ Originally based on an old version of [OSMBright](https://github.com/mapbox/osm-
 
 ### Attribution
 
-Please use add a reference to this page when using this style:
+Please feel free to use add a reference to this page when using this style:
 
 ```
 var Hydda_Full = L.tileLayer('https://{s}.tile.openstreetmap.se/hydda/full/{z}/{x}/{y}.png', {
