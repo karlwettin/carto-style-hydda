@@ -465,11 +465,11 @@
     text-wrap-width: 180;
   }
 }
-   
-#poi[type='university'][zoom>=15],
-#poi[type='hospital'][zoom>=16],
-#poi[type='school'][zoom>=17],
-#poi[type='library'][zoom>=17] {
+
+#area_label[type='university'][zoom>=15],
+#area_label[type='hospital'][zoom>=16],
+#area_label[type='school'][zoom>=17],
+#area_label[type='library'][zoom>=17] {
   text-name:"[name]";
   text-face-name:@sans;
   text-size:10;
