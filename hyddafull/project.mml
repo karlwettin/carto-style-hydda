@@ -37,6 +37,8 @@
       "geometry": "polygon",
       "id": "land-low",
       "name": "land-low",
+      "minzoom": 0,
+      "maxzoom": 9,
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
       "status": "on"
@@ -50,6 +52,8 @@
       "geometry": "polygon",
       "id": "land-high",
       "name": "land-high",
+      "minzoom": 10,
+      "maxzoom": 20,
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
       "status": "on"
@@ -64,13 +68,15 @@
         "id": "landuse_gen0",
         "key_field": "",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, way_area AS area, COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type\n  FROM planet_osm_polygon\n  WHERE way_area > 100000\n  ORDER BY way_area DESC\n) AS data",
+        "table": "( SELECT way, way_area AS area, COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type\n  FROM planet_osm_polygon\n  WHERE way_area > 1*!pixel_width!::real*!pixel_height!::real\n  ORDER BY way_area DESC\n) AS data",
         "type": "postgis"
       },
       "class": "",
       "geometry": "multipolygon",
       "id": "landuse_gen0",
       "name": "landuse_gen0",
+      "minzoom": 4,
+      "maxzoom": 9,
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
       "status": "on"
@@ -85,13 +91,15 @@
         "id": "landuse_gen1",
         "key_field": "",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, way_area AS area, COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type\n  FROM planet_osm_polygon\n  WHERE way_area > 10000\n  ORDER BY way_area DESC\n) AS data",
+        "table": "( SELECT way, way_area AS area, COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type\n  FROM planet_osm_polygon\n  WHERE way_area > 1*!pixel_width!::real*!pixel_height!::real\n  ORDER BY way_area DESC\n) AS data",
         "type": "postgis"
       },
       "class": "",
       "geometry": "multipolygon",
       "id": "landuse_gen1",
       "name": "landuse_gen1",
+      "minzoom": 10,
+      "maxzoom": 12,
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
       "status": "on"
@@ -113,6 +121,8 @@
       "geometry": "polygon",
       "id": "landuse",
       "name": "landuse",
+      "minzoom": 13,
+      "maxzoom": 20,
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
       "status": "on"
@@ -136,6 +146,8 @@
       },
       "id": "sports-grounds",
       "class": "",
+      "minzoom": 13,
+      "maxzoom": 20,
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
@@ -158,6 +170,8 @@
       "geometry": "linestring",
       "id": "waterway_low",
       "name": "waterway_low",
+      "minzoom": 8,
+      "maxzoom": 12,
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
       "status": "on"
@@ -177,6 +191,8 @@
       "geometry": "linestring",
       "id": "waterway_med",
       "name": "waterway_med",
+      "minzoom": 13,
+      "maxzoom": 14,
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913"
     },
@@ -195,6 +211,8 @@
       "geometry": "linestring",
       "id": "waterway_high",
       "name": "waterway_high",
+      "minzoom": 16,
+      "maxzoom": 20,
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913"
     },
@@ -208,13 +226,15 @@
         "id": "water_gen0",
         "key_field": "",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, \"natural\" AS type, way_area AS area\n  FROM planet_osm_polygon\n  WHERE (\"natural\" IN ('water', 'pond')\n    OR waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'riverbank', 'stream'))\n    AND way_area > 10000\n) AS data",
+        "table": "( SELECT way, \"natural\" AS type, way_area AS area\n  FROM planet_osm_polygon\n  WHERE (\"natural\" IN ('water', 'pond')\n    OR waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'riverbank', 'stream'))\n    AND way_area > 1*!pixel_width!::real*!pixel_height!::real\n) AS data",
         "type": "postgis"
       },
       "class": "",
       "geometry": "polygon",
       "id": "water_gen0",
       "name": "water_gen0",
+      "minzoom": 4,
+      "maxzoom": 9,
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
       "status": "on"
@@ -236,6 +256,8 @@
       "geometry": "polygon",
       "id": "water_gen1",
       "name": "water_gen1",
+      "minzoom": 10,
+      "maxzoom": 12,
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
       "status": "on"
@@ -257,6 +279,8 @@
       "geometry": "polygon",
       "id": "water",
       "name": "water",
+      "minzoom": 13,
+      "maxzoom": 20,
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
       "status": "on"
@@ -278,6 +302,8 @@
       "geometry": "polygon",
       "id": "landuse_overlays",
       "name": "landuse_overlays",
+      "minzoom": 5,
+      "maxzoom": 20,
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913"
     },
@@ -297,6 +323,8 @@
       "geometry": "linestring",
       "id": "admin",
       "name": "admin",
+      "minzoom": 2,
+      "maxzoom": 20,
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913"
     },
@@ -317,6 +345,8 @@
       "geometry": "linestring",
       "id": "tunnel",
       "name": "tunnel",
+      "minzoom": 11,
+      "maxzoom": 20,
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913"
     },
@@ -335,6 +365,8 @@
       "geometry": "polygon",
       "id": "buildings",
       "name": "buildings",
+      "minzoom": 12,
+      "maxzoom": 20,
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913"
     },
@@ -355,6 +387,8 @@
       "geometry": "linestring",
       "id": "aeroway",
       "name": "aeroway",
+      "minzoom": 10,
+      "maxzoom": 20,
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
       "status": "on"
@@ -376,6 +410,8 @@
       "geometry": "point",
       "id": "turning_circle_case",
       "name": "turning_circle_case",
+      "minzoom": 14,
+      "maxzoom": 20,
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913"
     },
@@ -396,24 +432,8 @@
       "geometry": "linestring",
       "id": "roads_high",
       "name": "roads_high",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
-    },
-    {
-      "Datasource": {
-        
-        "dbname": "gis",
-        "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
-        "geometry_field": "way",
-        
-        "key_field": "",
-        "table": "( SELECT way, highway AS type\n  FROM planet_osm_roads\n  WHERE highway IN ('motorway', 'trunk', 'primary', 'secondary', 'motorway_link', 'trunk_link')\n) AS data",
-        "type": "postgis"
-      },
-      "class": "",
-      "geometry": "linestring",
-      "id": "roads_med",
-      "name": "roads_med",
+      "minzoom": 14,
+      "maxzoom": 20,
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913"
     },
@@ -432,6 +452,8 @@
       "geometry": "linestring",
       "id": "roads_low",
       "name": "roads_low",
+      "minzoom": 5,
+      "maxzoom": 13,
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913"
     },
@@ -450,6 +472,8 @@
       "geometry": "point",
       "id": "turning_circle_fill",
       "name": "turning_circle_fill",
+      "minzoom": 14,
+      "maxzoom": 20,
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913"
     },
@@ -472,6 +496,8 @@
       "id": "bridge",
       "name": "bridge",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "minzoom": 14,
+      "maxzoom": 20,
       "srs-name": "900913",
       "status": "on",
       "extent": [
@@ -502,6 +528,8 @@
       },
       "id": "piers",
       "class": "",
+      "minzoom": 11,
+      "maxzoom": 20,
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
@@ -527,6 +555,8 @@
       "id": "piers-area",
       "class": "",
       "srs-name": "900913",
+      "minzoom": 12,
+      "maxzoom": 20,
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "piers-area"
@@ -541,13 +571,15 @@
         "id": "place",
         "key_field": "",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, place AS type, name, z_order, population\n  FROM planet_osm_point\n  WHERE place in ('country', 'state', 'city', 'town', 'village', 'hamlet', 'suburb', 'neighbourhood', 'locality')\n  ORDER BY population DESC NULLS LAST\n) AS data",
+        "table": "( SELECT way, place AS type, name, (CASE WHEN (tags->'population' ~ '^[0-9]{1,8}$') THEN (tags->'population')::INTEGER WHEN (place = 'city') THEN 100000 WHEN (place = 'town') THEN 1000 ELSE 1 end) population\n  FROM planet_osm_point\n  WHERE place in ('country', 'state', 'city', 'town', 'village', 'hamlet', 'suburb', 'neighbourhood', 'locality')\n  ORDER BY population DESC NULLS LAST\n) AS data",
         "type": "postgis"
       },
       "class": "",
       "geometry": "point",
       "id": "place",
       "name": "place",
+      "minzoom": 4,
+      "maxzoom": 20,
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
       "status": "on"
@@ -569,6 +601,8 @@
       "geometry": "point",
       "id": "area_label",
       "name": "area_label",
+      "minzoom": 10,
+      "maxzoom": 20,
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
       "status": "on"
@@ -590,6 +624,8 @@
       "geometry": "linestring",
       "id": "motorway_label",
       "name": "motorway_label",
+      "minzoom": 10,
+      "maxzoom": 20,
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
       "status": "on"
@@ -611,6 +647,8 @@
       "geometry": "linestring",
       "id": "mainroad_label",
       "name": "mainroad_label",
+      "minzoom": 13,
+      "maxzoom": 20,
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
       "status": "on"
@@ -633,6 +671,8 @@
       "geometry": "linestring",
       "id": "minorroad_label",
       "name": "minorroad_label",
+      "minzoom": 14,
+      "maxzoom": 20,
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
       "status": "on",
@@ -661,6 +701,8 @@
       "geometry": "linestring",
       "id": "waterway_label",
       "name": "waterway_label",
+      "minzoom": 13,
+      "maxzoom": 20,
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
       "status": "on"
@@ -683,6 +725,8 @@
       },
       "id": "island_label_polygon",
       "class": "",
+      "minzoom": 10,
+      "maxzoom": 20,
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
@@ -709,6 +753,8 @@
       },
       "id": "island_label_point",
       "class": "",
+      "minzoom": 13,
+      "maxzoom": 20,
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
@@ -734,6 +780,8 @@
       },
       "id": "housenames",
       "class": "",
+      "minzoom": 17,
+      "maxzoom": 20,
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
@@ -759,6 +807,8 @@
       },
       "id": "housenumbers",
       "class": "",
+      "minzoom": 17,
+      "maxzoom": 20,
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
